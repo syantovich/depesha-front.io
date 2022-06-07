@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    z-index: 3;
+}
+.pages{
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+}
+.pages a{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #3a3a3a;
+}
+.pages .active{
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 0.95rem;
+}

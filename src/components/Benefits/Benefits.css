@@ -1,0 +1,10 @@
+section{
+    display: flex;
+    justify-content: center;
+}
+section .benefits::after{
+    content: "";
+    width: 100%;
+    border-bottom: #3a3a3a solid 1px;
+    margin-bottom: 20px;
+}

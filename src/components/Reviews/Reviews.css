@@ -1,0 +1,74 @@
+.userImg{
+    width:90px;
+    height: 90px;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.rating span {
+    padding: 0;
+    font-size: 32px;
+    margin: 0 3px;
+    line-height: 1;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+.rating > span:before {
+    content: '★';
+}
+.rating > span.active {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+.review{
+    padding: 15px;
+    margin:5px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    background-color: #ffff;
+}
+
+.reviews li.alice-carousel__stage-item{
+
+}
+.alice-carousel{
+    position: relative;
+}
+.alice-carousel__prev-btn{
+    position: absolute;top:calc(50% - 60px);left: -50px;
+}
+.alice-carousel__prev-btn-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width:40px;
+    height: 40px;
+
+    border-radius: 100%;
+    border:2px solid black
+}
+.alice-carousel__next-btn-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:calc(50% - 60px);
+    width:40px;
+    height: 40px;
+    right: -50px;
+    border-radius: 100%;
+    border:2px solid black
+}
+.alice-carousel__prev-btn-wrapper{
+    position: relative;
+
+}

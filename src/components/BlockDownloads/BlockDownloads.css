@@ -1,0 +1,26 @@
+.blockDownloads_content_title{
+    font-size:40px
+}
+.blockDownloads_content_description{
+    font-size: 20px;
+}
+.blockDownloads{
+    text-align: left    ;
+}
+
+.blockDownloads_content_downloads .number{
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+.blockDownloads_content_downloads .text{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.blockDownloads_content_downloads p{
+    margin:0
+ }
+.blockDownloads_picture img{
+    width:100%;
+
+}

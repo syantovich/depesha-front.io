@@ -1,0 +1,36 @@
+h2{
+    font-size: 4rem;
+    margin: 0;
+}
+p{
+    font-weight: 300;
+    font-style: normal;
+    color: #333;
+    font-size: 1.125rem;
+}
+.preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    z-index: 1;
+    width:100%
+}
+
+
+.applinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.header_img{
+    position: relative;
+    bottom: -200px;
+}
+.after{
+    height: 200px;
+    width: 100%!important;
+    background-color: #f3f3f3;
+}
