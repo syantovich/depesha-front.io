@@ -100,6 +100,7 @@ export const menuApi = {
       logo {
         data {
           attributes {
+            name
             logo {
               data {
                 attributes {
@@ -122,6 +123,14 @@ export const menuApi = {
   `,
   background: gql`
     query GetMenu {
+      headerContent {
+        data {
+          attributes {
+            playmarket
+            appstore
+          }
+        }
+      }
       setting {
         data {
           attributes {
@@ -137,4 +146,33 @@ export const menuApi = {
       }
     }
   `,
+  getBlogs(p, l) {
+    return gql`
+      query GetBlogs {
+        blogs(pagination: { page: ${p}, pageSize: ${l}}) {
+          data {
+            id
+            attributes {
+              title
+              text
+              img {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+          meta {
+            pagination {
+              pageCount
+              page
+              pageSize
+            }
+          }
+        }
+      }
+    `;
+  },
 };

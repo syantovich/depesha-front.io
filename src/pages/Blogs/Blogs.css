@@ -1,0 +1,17 @@
+.blogImg{
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.blogElement{
+    max-width:300px;
+    background-color: #f3f3f3;
+    padding: 30px;
+    border-radius: 15px;
+}
+.linkToBlog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+

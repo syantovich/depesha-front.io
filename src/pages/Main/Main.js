@@ -1,20 +1,18 @@
 import { useQuery } from "@apollo/client";
-import { menuApi } from "../api/api";
+import { menuApi } from "../../api/api";
 import { useEffect, useState } from "react";
-import { SERVER_API } from "../constants";
-import { Stack } from "@mui/material";
-import AppStorePNG from "../img/appstore.png";
-import GooglePlayPNG from "../img/GooglePlay.png";
+import { SERVER_API } from "../../constants";
 import { Grid } from "@mui/material";
-import "./Main/Main.css";
+import "./Main.css";
 import MobileDetect from "mobile-detect";
-import Benefits from "./Benefits/Benefits";
-import Loading from "./Loading/Loading";
-import BlockDownloads from "./BlockDownloads/BlockDownloads";
-import Reviews from "./Reviews/Reviews";
+import Benefits from "../../components/Benefits/Benefits";
+import Loading from "../../components/Loading/Loading";
+import BlockDownloads from "../../components/BlockDownloads/BlockDownloads";
+import Reviews from "../../components/Reviews/Reviews";
+import ButtonsDownloads from "../../components/ButtonsDownloads/ButtonsDownloads";
 
 const Main = () => {
-  const { loading, data, error } = useQuery(menuApi.getMenu);
+  const { loading, data } = useQuery(menuApi.getMenu);
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const [plM, setPlM] = useState();
@@ -70,26 +68,12 @@ const Main = () => {
                 <p>{description}</p>
               </Grid>
               <Grid item xs={12}>
-                <Grid container spacing={2} className="applinks">
-                  {detected.os() === null || detected.os() === "iOS" ? (
-                    <Grid item>
-                      <a href={apS}>
-                        <img src={AppStorePNG} width={"160px"} eight="50px" />
-                      </a>
-                    </Grid>
-                  ) : (
-                    false
-                  )}
-                  {detected.os() === null || detected.os() === "AndroidOS" ? (
-                    <Grid item>
-                      <a href={plM}>
-                        <img src={GooglePlayPNG} width="160px" height="50px" />
-                      </a>
-                    </Grid>
-                  ) : (
-                    false
-                  )}
-                </Grid>
+                <ButtonsDownloads
+                  playmarket={plM}
+                  appstore={apS}
+                  wm={detected.os()}
+                  direction={"row"}
+                />
               </Grid>
               <Grid item xs={12}>
                 <img

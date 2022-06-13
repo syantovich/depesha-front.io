@@ -2,10 +2,14 @@ import "./App.css";
 import { useQuery } from "@apollo/client";
 import { SERVER_API } from "./constants";
 import Header from "./components/Header/Header";
-import Main from "./components/Main";
+import Main from "./pages/Main/Main";
 import { Route, Routes } from "react-router-dom";
 import { menuApi } from "./api/api";
 import Loading from "./components/Loading/Loading";
+import Footer from "./components/Footer/Footer";
+import ButtonsDownloads from "./components/ButtonsDownloads/ButtonsDownloads";
+import ErrorPage from "./pages/Error/ErrorPage";
+import Blogs from "./pages/Blogs/Blogs";
 
 function App() {
   const { data, loading } = useQuery(menuApi.background);
@@ -24,14 +28,11 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Main />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/*" element={<ErrorPage />} />
             </Routes>
-            <section className="s" />
-            <section className="s" />
-            <section className="s" />
-            <section className="s" />
-            <section className="s" />
-            <section className="s" />
           </main>
+          <Footer />
         </div>
       )}
     </>

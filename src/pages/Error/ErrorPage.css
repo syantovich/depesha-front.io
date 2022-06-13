@@ -1,0 +1,6 @@
+.errorPage{
+    position: absolute;
+    left:calc(50% - 60px);
+    top:calc(50% - 40px);
+    font-size:80px
+}
